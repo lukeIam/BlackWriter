@@ -12,7 +12,7 @@ The package should also be compatible for the iOS app, but may need a jailbreak
 ###Disclaimer:
 - I'm not affiliated with moses. Verlag the owner of the black stories app. 
 - This tool only allows you to create stories which are compatible with the black stories app.
-- This tools does **NOT** allow to bypass the in-app purchases and get paid package for free.
+- This tool does **NOT** allow to bypass the in-app purchases and get paid package for free.
 
 ---
 ##Schreibe deine eigenen Geschichten für die black stories App (© moses. Verlag)
