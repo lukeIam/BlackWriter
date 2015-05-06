@@ -25,7 +25,7 @@ Android\data\de.moses.blackstories\files\
 Die Pakete sollten auch mit der iOS version der App kompatibel sein, allerdings könnte ein Jailbreak nötig sein. (Da ich kein iOS Gerät besitzte kann ich das nicht überprüfen)
 
 ###Disclaimer:
-- Dies ist **kein** offizelles Tool des moses. Verlag dem Herausgeber der black stories app und steht auch in keiner Verbindung mit Ihnen. 
+- Dies ist **kein** offizelles Tool des moses. Verlag (dem Herausgeber der black stories app) und steht auch in keiner Verbindung mit Ihnen. 
 - Dieses Tool soll es nur erlauben eigene Packete zu erstellen, welche mit der black stories App kompatibel sind.
 - Dieses Tool ermöglicht es **NICHT** die In-App Einkäufe zu umgehen und zu kaufende Pakete umsonst zu erhalten.
 
