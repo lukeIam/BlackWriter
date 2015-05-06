@@ -1,5 +1,5 @@
 # BlackWriter
-##Write your own stories for the black stories app (© moses. Verlag)
+##Write your own stories for the [black stories app](https://play.google.com/store/apps/details?id=de.moses.blackstories&hl=de) (© moses. Verlag)
 Just copy the resulting folder to the black stories app on your android phone:
 
 ```
@@ -15,7 +15,7 @@ The package should also be compatible for the iOS app, but may need a jailbreak
 - This tool does **NOT** allow to bypass the in-app purchases and get paid package for free.
 
 ---
-##Schreibe deine eigenen Geschichten für die black stories App (© moses. Verlag)
+##Schreibe deine eigenen Geschichten für die [black stories App](https://play.google.com/store/apps/details?id=de.moses.blackstories&hl=de) (© moses. Verlag)
 Kopiere den erzeugten Ordner einfach in die black stories App auf deinem Android smartphone:
 
 ```
