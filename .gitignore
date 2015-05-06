@@ -1,0 +1,4 @@
+*.user
+*.suo
+/BlackWriter/bin
+/BlackWriter/obj
