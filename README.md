@@ -32,6 +32,9 @@ Die Pakete sollten auch mit der iOS version der App kompatibel sein, allerdings 
 ##Download
 [Download BlackWriter](https://github.com/lukeIam/BlackWriter/blob/master/Dist/BlackWriter.exe?raw=true)
 
+##Fertige Sets
+[Sets zum Herunterladen](https://github.com/lukeIam/BlackWriter/tree/master/Sets#deutsch)
+
 ##Screenshot
 
 ![image](https://cloud.githubusercontent.com/assets/5115160/7469254/724894e8-f311-11e4-847d-bf7fbf20b9af.png)
