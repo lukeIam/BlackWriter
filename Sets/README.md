@@ -1,8 +1,8 @@
 #Sets zum Herunterladen 
 
 ##Deutsch
-##Spielwiki Edition Tod
-Verschiedene R‰tsel mit Todesf‰llen aus dem Spielwiki(https://www.spielwiki.de)
+##[Spielwiki Edition Tod] (https://github.com/lukeIam/BlackWriter/blob/master/Sets/Spielwiki_Edition_Tod.zip?raw=true)
+Verschiedene R√§tsel mit Todesf√§llen aus dem Spielwiki (https://www.spielwiki.de)
 
 CC BY-SA 3.0 DE http://creativecommons.org/licenses/by-sa/3.0/de/
 
