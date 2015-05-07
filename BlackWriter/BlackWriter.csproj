@@ -71,6 +71,11 @@
     </Compile>
     <Compile Include="SingleAssemblyComponentResourceManager.cs" />
     <Compile Include="SingleFileResourceManager.cs" />
+    <Compile Include="strings.de.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>strings.de.resx</DependentUpon>
+    </Compile>
     <Compile Include="strings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -95,7 +100,10 @@
     <EmbeddedResource Include="SetEditor.resx">
       <DependentUpon>SetEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="strings.de.resx" />
+    <EmbeddedResource Include="strings.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>strings.Designer.cs</LastGenOutput>
@@ -157,7 +165,6 @@
   <Target Name="AfterBuild">
   </Target>  
   -->
-
   <UsingTask TaskName="ReplaceFileText" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll">
     <ParameterGroup>
       <InputFilename ParameterType="System.String" Required="true" />
@@ -170,17 +177,14 @@
       <Using Namespace="System" />
       <Using Namespace="System.IO" />
       <Using Namespace="System.Text.RegularExpressions" />
-      <Code Type="Fragment" Language="cs">
-        <![CDATA[
+      <Code Type="Fragment" Language="cs"><![CDATA[
             File.WriteAllText(
                 OutputFilename,
                 Regex.Replace(File.ReadAllText(InputFilename), MatchExpression, ReplacementText)
                 );
-          ]]>
-      </Code>
+          ]]></Code>
     </Task>
   </UsingTask>
-
   <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release'">
     <ItemGroup>
       <InputAssemblies Include="$(OutputPath)\BlackWriter.exe" />
@@ -188,21 +192,10 @@
     </ItemGroup>
     <ILRepack Parallel="true" Internalize="false" TargetPlatformVersion="v4" InputAssemblies="@(InputAssemblies)" TargetKind="winexe" OutputFile="$(MSBuildProjectDirectory)\..\Dist\$(AssemblyName).exe" />
   </Target>
-
   <Target Name="BeforeBuild">
-    <Message Text="Insert SingleAssemblyComponentResourceManager in $(MSBuildProjectDirectory)\SetEditor.Designer.cs" Importance="high"/>
-    <ReplaceFileText
-      InputFilename="$(MSBuildProjectDirectory)\SetEditor.Designer.cs"
-      OutputFilename="$(MSBuildProjectDirectory)\SetEditor.Designer.cs"
-      MatchExpression="new System.ComponentModel.ComponentResourceManager"
-      ReplacementText="new SingleAssemblyComponentResourceManager" />
-    
-    <Message Text="Insert SingleFileResourceManager in $(MSBuildProjectDirectory)\strings.Designer.cs" Importance="high"/>
-    <ReplaceFileText
-      InputFilename="$(MSBuildProjectDirectory)\strings.Designer.cs"
-      OutputFilename="$(MSBuildProjectDirectory)\strings.Designer.cs"
-      MatchExpression="(new global::System\.Resources\.ResourceManager)(.+)(\.Assembly)(\);)"
-      ReplacementText="new SingleFileResourceManager$2$4" />
+    <Message Text="Insert SingleAssemblyComponentResourceManager in $(MSBuildProjectDirectory)\SetEditor.Designer.cs" Importance="high" />
+    <ReplaceFileText InputFilename="$(MSBuildProjectDirectory)\SetEditor.Designer.cs" OutputFilename="$(MSBuildProjectDirectory)\SetEditor.Designer.cs" MatchExpression="new System.ComponentModel.ComponentResourceManager" ReplacementText="new SingleAssemblyComponentResourceManager" />
+    <Message Text="Insert SingleFileResourceManager in $(MSBuildProjectDirectory)\strings.Designer.cs" Importance="high" />
+    <ReplaceFileText InputFilename="$(MSBuildProjectDirectory)\strings.Designer.cs" OutputFilename="$(MSBuildProjectDirectory)\strings.Designer.cs" MatchExpression="(new global::System\.Resources\.ResourceManager)(.+)(\.Assembly)(\);)" ReplacementText="new SingleFileResourceManager$2$4" />
   </Target>
-  
 </Project>
